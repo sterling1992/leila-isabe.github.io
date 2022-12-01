@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    
+}
+html{
+    height: 100%;
+    background-image: url('foto\ 1.jpg');
+    background-size: 100%;
+}
+.logo{
+    width: 100px;
+}
+img{
+    width:50px;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(59, 62, 226, 0.7);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "gifbar"
+    "navbar"
+    "main"
+    "sidebar"
+    "gifbar2"
+    "footer";
+}
+h1{
+    font-size: 2.5rem;
+    color: royalblue;
+    text-shadow: 2px 2px black;
+}
+.header {
+    grid-area: header;
+    background-color: #90ee9000;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 170px;
+}
+.header:hover{
+    background-color: #90ee90a9;
+}
+.gif{
+    grid-area: gifbar;
+    background-image: url('./Tokyo_Animated_Pictograms_2020.gif');
+    background-size: 300px;
+    height: 100px;
+}
+.uno{
+    width: 100px;
+    background-color: #90ee9000;
+    border-radius: 10%;
+}
+.dos{
+    width: 100px;
+    background-color: #90ee9000;
+    border-radius: 10%;
+}
+.tres{
+    width: 100px;
+    background-color: #90ee9000;
+    border-radius: 10%;
+}
+.cuatro{
+    width: 100px;
+    background-color: #90ee9000;
+    border-radius: 10%;
+}
+.uno:hover{
+    background-color: rgba(65, 105, 225, 0.5);
+}
+.dos:hover{
+    background-color: #90ee90a9;
+}
+.tres:hover{
+    background-color: #ee5a5aa9;
+}
+.cuatro:hover{
+    background-color: #faeb17a9;
+}
+.imguno:hover{
+    width: 70px;
+}
+.imgdos:hover{
+    width: 70px;
+}
+.imgtres:hover{
+    width: 70px;
+}
+.imgcuatro:hover{
+    width: 70px;
+}
+.navbar {
+    grid-area: navbar;
+    background-color:rgba(255, 0, 0, 0);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-shadow: 1px 1px #90ee90a9;
+    height: 100px;
+}
+.navbar:hover{
+    background-color: rgba(255, 255, 255, 0.568);
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color:rgba(255, 0, 0, 0);
+}
+.sidebar:hover{
+    background-color: rgba(255, 255, 255, 0.568);
+}
+.maincontacto:hover{
+    background-color: rgba(255, 255, 255, 0.582);
+    border-radius: 10%;
+}
+.main {
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0);
+}
+.main:hover{
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0.568);
+}
+.fotomain{
+    width: 400px;
+}
+.img1{
+    width: 400px;
+}
+.row{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.column{
+    flex: 25%;
+    padding: 5px;
+}
+.column img{
+    margin-top: 5px;
+}
+.gif2{
+    grid-area: gifbar2;
+    background-image: url('./JJOO_Comparacion.gif');
+    background-size: 300px;
+    height: 105px;
+}
+.imgfooter{
+    width: 50px;
+}
+.imgfooter:hover{
+    width: 70px;
+}
+.footer {
+    grid-area: footer;
+    background-color:  #90ee9000;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+}
+.footer:hover{
+    background-color:  #90ee9086;
+}
+@media(min-width:600px){
+    .grid-container{
+        grid-template:
+        "header header" 120px
+        "gifbar gifbar" 100px
+        "navbar navbar" 100px
+        "sidebar main"  auto
+        "gifbar2 gifbar2" 100px
+        "footer footer" 100px/
+        200px   auto;
+    }
+}
+@media(min-width:900px){
+    .grid-container{
+        grid-template:
+        "header     header  header"     130px
+        "gifbar     gifbar  gifbar"     100px
+        "navbar     main    sidebar"    auto
+        "footer     footer  footer"     100px
+        200px       auto;
+    }
+    .column{
+        flex: 80%;
+    }
+}
